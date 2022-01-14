@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext", "dom"],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "noEmit": true,
+    "target": "es2015",
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

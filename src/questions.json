@@ -1,0 +1,324 @@
+[
+  {
+    "slug": "vehicle",
+    "title": "Choose your vehicle",
+    "summaryTitle": "Vehicle",
+    "options": {
+      "small-car": {
+        "title": "Small car",
+        "summaryDescription": "Super minimalist. Are you on team #justonebag?",
+        "dimensions": {
+          "dirtbag": 120,
+          "minimalist": 100,
+          "baller": -100,
+          "chiller": 75
+        }
+      },
+      "suv-or-truck": {
+        "title": "SUV or Truck",
+        "summaryDescription": "More stuff, possible even good gas mileage.",
+        "dimensions": {
+          "dirtbag": 25,
+          "minimalist": 75,
+          "baller": 0,
+          "chiller": 100
+        }
+      },
+      "van": {
+        "title": "Van",
+        "summaryDescription": "Is it cramped? Yes. Is there a toilet? Maybe.",
+        "dimensions": {
+          "dirtbag": 125,
+          "minimalist": 100,
+          "baller": 0,
+          "chiller": 75
+        }
+      },
+      "rv-or-trailer": {
+        "title": "RV or Trailer",
+        "summaryDescription": "You got a home on wheels. You might even have A/C!",
+        "dimensions": {
+          "dirtbag": 100,
+          "minimalist": -50,
+          "baller": 75,
+          "chiller": 125
+        }
+      },
+      "bicycle": {
+        "title": "Bicycle",
+        "summaryDescription": "You'll strap as much as you can to two wheels and pedal your way to freedom.",
+        "dimensions": {
+          "dirtbag": 100,
+          "minimalist": 75,
+          "baller": -75,
+          "chiller": 50
+        }
+      },
+      "airplane": {
+        "title": "Airplane",
+        "summaryDescription": "All places on the horizon, near and far.",
+        "dimensions": {
+          "dirtbag": -100,
+          "minimalist": 50,
+          "baller": 125,
+          "chiller": 75
+        }
+      },
+      "boat": {
+        "title": "Boat",
+        "summaryDescription": "Sail on, friend. Sail on.",
+        "dimensions": {
+          "dirtbag": -25,
+          "minimalist": 50,
+          "baller": 125,
+          "chiller": 100
+        }
+      },
+      "none": {
+        "title": "None",
+        "summaryDescription": "Nothin' but your own two feet.",
+        "dimensions": {
+          "dirtbag": 125,
+          "minimalist": 75,
+          "baller": 25,
+          "chiller": 0
+        }
+      }
+    }
+  },
+  {
+    "slug": "budget",
+    "title": "Choose your budget",
+    "summaryTitle": "Budget",
+    "options": {
+      "thrifty": {
+        "title": "< $50 / night",
+        "summaryDescription": "You don't mind roughing it.",
+        "dimensions": {
+          "dirtbag": 200,
+          "minimalist": 150,
+          "baller": -200,
+          "chiller": -100
+        }
+      },
+      "normal": {
+        "title": "< $100 / night",
+        "summaryDescription": "You want.... *some* amenities",
+        "dimensions": {
+          "dirtbag": 150,
+          "minimalist": 200,
+          "baller": -100,
+          "chiller": 75
+        }
+      },
+      "baller": {
+        "title": "Baller – $100+ / night",
+        "summaryDescription": "What did you, win the lottery?",
+        "dimensions": {
+          "dirtbag": -200,
+          "minimalist": -100,
+          "baller": 200,
+          "chiller": 100
+        }
+      },
+      "dirtbag": {
+        "title": "True dirtbag – $0 / night",
+        "summaryDescription": "I don't really know where you think you're going to sleep, and neither do you.",
+        "dimensions": {
+          "dirtbag": 225,
+          "minimalist": 100,
+          "baller": -225,
+          "chiller": -150
+        }
+      }
+    }
+  },
+  {
+    "slug": "terrain",
+    "title": "Terrain",
+    "summaryTitle": "Terrain",
+    "options": {
+      "beach": {
+        "title": "Beach",
+        "summaryDescription": "Sea side breeze 10000%",
+        "dimensions": {
+          "dirtbag": 150,
+          "minimalist": 125,
+          "baller": 75,
+          "chiller": 100
+        }
+      },
+      "desert": {
+        "title": "Desert",
+        "summaryDescription": "Cacti and palm trees please, and hopefully a pool and fire pit.",
+        "dimensions": {
+          "dirtbag": 75,
+          "minimalist": 200,
+          "baller": -100,
+          "chiller": 100
+        }
+      },
+      "mountains": {
+        "title": "Mountains",
+        "summaryDescription": "You're probably in good shape.",
+        "dimensions": {
+          "dirtbag": 125,
+          "minimalist": 100,
+          "baller": 0,
+          "chiller": 75
+        }
+      },
+      "city": {
+        "title": "City",
+        "summaryDescription": "Stay out late, live next to a 3rd wave coffee shop",
+        "dimensions": {
+          "dirtbag": -25,
+          "minimalist": 75,
+          "baller": 200,
+          "chiller": 100
+        }
+      }
+    }
+  },
+  {
+    "slug": "duration",
+    "title": "How long do you want to go nomad for?",
+    "summaryTitle": "How long?",
+    "options": {
+      "short": {
+        "title": "1 - 2 months",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": -50,
+          "minimalist": 0,
+          "baller": 150,
+          "chiller": 100
+        }
+      },
+      "months": {
+        "title": "3 - 6 months",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": 50,
+          "minimalist": 75,
+          "baller": -25,
+          "chiller": 100
+        }
+      },
+      "year": {
+        "title": "Up to a year",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": 100,
+          "minimalist": 200,
+          "baller": -100,
+          "chiller": 25
+        }
+      },
+      "indefinitely": {
+        "title": "Indefinitely",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": 200,
+          "minimalist": 100,
+          "baller": 0,
+          "chiller": -100
+        }
+      }
+    }
+  },
+  {
+    "slug": "stuff",
+    "title": "What are you going to do with your stuff?",
+    "summaryTitle": "Stuff you're leaving behind",
+    "options": {
+      "storage": {
+        "title": "Put it in a storage unit",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": -100,
+          "minimalist": 0,
+          "baller": 100,
+          "chiller": 150
+        }
+      },
+      "donate": {
+        "title": "Donate it all",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": -25,
+          "minimalist": 50,
+          "baller": -100,
+          "chiller": 100
+        }
+      },
+      "junk": {
+        "title": "Call a junk removal company to take it all away",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": 0,
+          "minimalist": 100,
+          "baller": 200,
+          "chiller": 150
+        }
+      },
+      "keep": {
+        "title": "Keep your apartment, house, or bring everything with you",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": 125,
+          "minimalist": 50,
+          "baller": 200,
+          "chiller": 100
+        }
+      }
+    }
+  },
+  {
+    "slug": "belongings",
+    "title": "How much stuff are you going to bring with you?",
+    "summaryTitle": "Belongings on the road",
+    "options": {
+      "minimalist": {
+        "title": "As little as possible",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": 200,
+          "minimalist": 150,
+          "baller": -100,
+          "chiller": 25
+        }
+      },
+      "comfort": {
+        "title": "Essentials plus some creature comforts",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": 100,
+          "minimalist": 200,
+          "baller": -100,
+          "chiller": 0
+        }
+      },
+      "style": {
+        "title": "I'm bringing my favorite shoes, a pillow, and a dutch oven.",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": -200,
+          "minimalist": -100,
+          "baller": 75,
+          "chiller": 125
+        }
+      },
+      "buy-it-all": {
+        "title": "I don't need to bring stuff, that's what Amazon is for",
+        "summaryDescription": "",
+        "dimensions": {
+          "dirtbag": -100,
+          "minimalist": 0,
+          "baller": 200,
+          "chiller": 100
+        }
+      }
+    }
+  }
+]
