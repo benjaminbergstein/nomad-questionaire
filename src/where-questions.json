@@ -1,0 +1,660 @@
+{
+  "cities": {
+    "bayArea": {
+      "title": "Bay Area"
+    },
+    "hawaii": {
+      "title": "Hawaii"
+    },
+    "LA": {
+      "title": "Los Angeles"
+    },
+    "palmSpringsJoshuaTree": {
+      "title": "Palm Springs/Joshua Tree"
+    },
+    "saltLakeCity": {
+      "title": "Salt Lake City"
+    },
+    "newYorkCity": {
+      "title": "New York City"
+    },
+    "miami": {
+      "title": "Miami"
+    },
+    "santaFe": {
+      "title": "Santa Fe"
+    },
+    "tahoe": {
+      "title": "Tahoe"
+    },
+    "arizona": {
+      "title": "Arizona"
+    },
+    "jacksonHole": {
+      "title": "Jackson Hole"
+    },
+    "nashville": {
+      "title": "Nashville"
+    },
+    "charleston": {
+      "title": "Charleston"
+    },
+    "austin": {
+      "title": "Austin"
+    },
+    "puertoRico": {
+      "title": "Puerto Rico"
+    }
+  },
+  "questions": [
+    {
+      "slug": "work-hours",
+      "title": "Work hours",
+      "summaryTitle": "What's your preferred work schedule?",
+      "options": {
+        "hst": {
+          "title": "Early bird",
+          "summaryDescription": "7am - 3pm",
+          "dimensions": {
+            "bayArea": 0,
+            "hawaii": 100,
+            "LA": 0,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 0,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 0,
+            "tahoe": 0,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 0
+          }
+        },
+        "pst": {
+          "title": "Keep it normal",
+          "summaryDescription": "9am-5pm",
+          "dimensions": {
+            "bayArea": 100,
+            "hawaii": 0,
+            "LA": 100,
+            "palmSpringsJoshuaTree": 100,
+            "saltLakeCity": 0,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 0,
+            "tahoe": 100,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 0
+          }
+        },
+        "mst": {
+          "title": "Almost normal",
+          "summaryDescription": "10am-6pm",
+          "dimensions": {
+            "bayArea": 0,
+            "hawaii": 0,
+            "LA": 0,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 100,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 100,
+            "tahoe": 0,
+            "arizona": 100,
+            "jacksonHole": 100,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 0
+          }
+        },
+        "cst": {
+          "title": "Restful mornings",
+          "summaryDescription": "11am-7pm",
+          "dimensions": {
+            "bayArea": 0,
+            "hawaii": 0,
+            "LA": 0,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 0,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 0,
+            "tahoe": 0,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 100,
+            "charleston": 0,
+            "austin": 100,
+            "puertoRico": 0
+          }
+        },
+        "est": {
+          "title": "Afternoon worker",
+          "summaryDescription": "12pm-8pm",
+          "dimensions": {
+            "bayArea": 10,
+            "hawaii": 0,
+            "LA": 0,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 0,
+            "newYorkCity": 100,
+            "miami": 100,
+            "santaFe": 0,
+            "tahoe": 0,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 0,
+            "charleston": 100,
+            "austin": 0,
+            "puertoRico": 0
+          }
+        },
+        "ast": {
+          "title": "Night shift",
+          "summaryDescription": "1pm-9pm",
+          "dimensions": {
+            "bayArea": 0,
+            "hawaii": 0,
+            "LA": 0,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 0,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 0,
+            "tahoe": 0,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 100
+          }
+        }
+      }
+    },
+    {
+      "slug": "budget",
+      "title": "Budget",
+      "summaryTitle": "How much are you willing to spend on living expenses?",
+      "options": {
+        "thrifty": {
+          "title": "< $50 / night",
+          "summaryDescription": "You just want a roof over your head.",
+          "dimensions": {
+            "bayArea": 0,
+            "hawaii": 0,
+            "LA": 0,
+            "palmSpringsJoshuaTree": 100,
+            "saltLakeCity": 50,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 50,
+            "tahoe": 0,
+            "arizona": 50,
+            "jacksonHole": 100,
+            "nashville": 20,
+            "charleston": 50,
+            "austin": 30,
+            "puertoRico": 0
+          }
+        },
+        "normal": {
+          "title": "< $100 / night",
+          "summaryDescription": "You're willing to spend a little.",
+          "dimensions": {
+            "bayArea": 0,
+            "hawaii": 0,
+            "LA": 0,
+            "palmSpringsJoshuaTree": 50,
+            "saltLakeCity": 100,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 100,
+            "tahoe": 100,
+            "arizona": 100,
+            "jacksonHole": 50,
+            "nashville": 100,
+            "charleston": 100,
+            "austin": 100,
+            "puertoRico": 0
+          }
+        },
+        "bougie": {
+          "title": "$100+ / night",
+          "summaryDescription": "I'll spend what it takes to get the place I want",
+          "dimensions": {
+            "bayArea": 100,
+            "hawaii": 100,
+            "LA": 100,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 0,
+            "newYorkCity": 100,
+            "miami": 100,
+            "santaFe": 0,
+            "tahoe": 100,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 60
+          }
+        },
+        "dirtbag": {
+          "title": "$0 / night",
+          "summaryDescription": "My wallet doesn't need to know I'm traveling.",
+          "dimensions": {
+            "bayArea": 0,
+            "hawaii": 0,
+            "LA": 0,
+            "palmSpringsJoshuaTree": 100,
+            "saltLakeCity": 0,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 10,
+            "tahoe": 0,
+            "arizona": 0,
+            "jacksonHole": 100,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 100
+          }
+        }
+      }
+    },
+    {
+      "slug": "terrain",
+      "title": "Terrain",
+      "summaryTitle": "Terrain",
+      "options": {
+        "beach": {
+          "title": "Beach",
+          "summaryDescription": "The ocean is my place",
+          "dimensions": {
+            "bayArea": 80,
+            "hawaii": 100,
+            "LA": 100,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 0,
+            "newYorkCity": 0,
+            "miami": 100,
+            "santaFe": 0,
+            "tahoe": 30,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 100
+          }
+        },
+        "desert": {
+          "title": "Desert",
+          "summaryDescription": "Sun, sand and sprawling land",
+          "dimensions": {
+            "bayArea": 0,
+            "hawaii": 0,
+            "LA": 80,
+            "palmSpringsJoshuaTree": 100,
+            "saltLakeCity": 0,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 100,
+            "tahoe": 0,
+            "arizona": 100,
+            "jacksonHole": 20,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 30,
+            "puertoRico": 0
+          }
+        },
+        "mountains": {
+          "title": "Mountains",
+          "summaryDescription": "The higher the better",
+          "dimensions": {
+            "bayArea": 60,
+            "hawaii": 0,
+            "LA": 60,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 70,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 0,
+            "tahoe": 100,
+            "arizona": 0,
+            "jacksonHole": 100,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 0
+          }
+        },
+        "city": {
+          "title": "City",
+          "summaryDescription": "Happy hours and late night pizza",
+          "dimensions": {
+            "bayArea": 50,
+            "hawaii": 0,
+            "LA": 70,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 0,
+            "newYorkCity": 100,
+            "miami": 100,
+            "santaFe": 0,
+            "tahoe": 0,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 70,
+            "charleston": 0,
+            "austin": 50,
+            "puertoRico": 20
+          }
+        }
+      }
+    },
+    {
+      "slug": "land-type",
+      "title": "Hiking",
+      "summaryTitle": "What's your preferred type of hike?",
+      "options": {
+        "city": {
+          "title": "Concrete",
+          "summaryDescription": "Walking to brunch counts as a hike, right?",
+          "dimensions": {
+            "bayArea": 50,
+            "hawaii": 0,
+            "LA": 70,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 0,
+            "newYorkCity": 100,
+            "miami": 100,
+            "santaFe": 0,
+            "tahoe": 0,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 50,
+            "charleston": 40,
+            "austin": 50,
+            "puertoRico": 0
+          }
+        },
+        "coastal": {
+          "title": "Coastal",
+          "summaryDescription": "I want to see the water the whole time",
+          "dimensions": {
+            "bayArea": 50,
+            "hawaii": 100,
+            "LA": 70,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 0,
+            "newYorkCity": 0,
+            "miami": 100,
+            "santaFe": 0,
+            "tahoe": 0,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 100
+          }
+        },
+        "forest": {
+          "title": "Forest",
+          "summaryDescription": "Surround me with the smell of trees",
+          "dimensions": {
+            "bayArea": 80,
+            "hawaii": 70,
+            "LA": 70,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 0,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 0,
+            "tahoe": 0,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 100,
+            "charleston": 100,
+            "austin": 0,
+            "puertoRico": 30
+          }
+        },
+        "unique": {
+          "title": "Unique",
+          "summaryDescription": "Something I haven't seen before",
+          "dimensions": {
+            "bayArea": 50,
+            "hawaii": 50,
+            "LA": 50,
+            "palmSpringsJoshuaTree": 100,
+            "saltLakeCity": 80,
+            "newYorkCity": 0,
+            "miami": 60,
+            "santaFe": 70,
+            "tahoe": 60,
+            "arizona": 30,
+            "jacksonHole": 30,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 30
+          }
+        },
+        "mountains": {
+          "title": "Rocky",
+          "summaryDescription": "I don't mind a challenge. Make it steep.",
+          "dimensions": {
+            "bayArea": 50,
+            "hawaii": 20,
+            "LA": 50,
+            "palmSpringsJoshuaTree": 80,
+            "saltLakeCity": 60,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 50,
+            "tahoe": 60,
+            "arizona": 80,
+            "jacksonHole": 100,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 0
+          }
+        }
+      }
+    },
+    {
+      "slug": "climate",
+      "title": "Weather",
+      "summaryTitle": "What season makes you happiest?",
+      "options": {
+        "summer": {
+          "title": "Summer",
+          "summaryDescription": "Look at that sweet summer sun!",
+          "dimensions": {
+            "bayArea": 50,
+            "hawaii": 100,
+            "LA": 80,
+            "palmSpringsJoshuaTree": 100,
+            "saltLakeCity": 20,
+            "newYorkCity": 0,
+            "miami": 100,
+            "santaFe": 60,
+            "tahoe": 0,
+            "arizona": 100,
+            "jacksonHole": 0,
+            "nashville": 20,
+            "charleston": 20,
+            "austin": 50,
+            "puertoRico": 100
+          }
+        },
+        "autumn": {
+          "title": "Autumn",
+          "summaryDescription": "A light jacket is good for me",
+          "dimensions": {
+            "bayArea": 80,
+            "hawaii": 0,
+            "LA": 20,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 30,
+            "newYorkCity": 40,
+            "miami": 0,
+            "santaFe": 40,
+            "tahoe": 60,
+            "arizona": 0,
+            "jacksonHole": 50,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 0
+          }
+        },
+        "spring": {
+          "title": "Spring",
+          "summaryDescription": "Fall breeze with a hint of summer sun",
+          "dimensions": {
+            "bayArea": 80,
+            "hawaii": 0,
+            "LA": 50,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 50,
+            "newYorkCity": 50,
+            "miami": 0,
+            "santaFe": 60,
+            "tahoe": 40,
+            "arizona": 0,
+            "jacksonHole": 50,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 0
+          }
+        },
+        "winter": {
+          "title": "Winter",
+          "summaryDescription": "Let it snow!",
+          "dimensions": {
+            "bayArea": 0,
+            "hawaii": 0,
+            "LA": 0,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 50,
+            "newYorkCity": 30,
+            "miami": 0,
+            "santaFe": 30,
+            "tahoe": 100,
+            "arizona": 0,
+            "jacksonHole": 100,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 0
+          }
+        }
+      }
+    },
+    {
+      "slug": "covid",
+      "title": "Covid comfort zone",
+      "summaryTitle": "How comfortable are you in crowds considering the current pandemic?",
+      "options": {
+        "concerned": {
+          "title": "Concerned",
+          "summaryDescription": "As little people as possible",
+          "dimensions": {
+            "bayArea": 30,
+            "hawaii": 30,
+            "LA": 0,
+            "palmSpringsJoshuaTree": 100,
+            "saltLakeCity": 30,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 30,
+            "tahoe": 30,
+            "arizona": 50,
+            "jacksonHole": 100,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 0
+          }
+        },
+        "cautious": {
+          "title": "Cautious",
+          "summaryDescription": "Some people are okay, but only outdoors",
+          "dimensions": {
+            "bayArea": 30,
+            "hawaii": 30,
+            "LA": 20,
+            "palmSpringsJoshuaTree": 100,
+            "saltLakeCity": 30,
+            "newYorkCity": 0,
+            "miami": 10,
+            "santaFe": 30,
+            "tahoe": 30,
+            "arizona": 50,
+            "jacksonHole": 100,
+            "nashville": 20,
+            "charleston": 20,
+            "austin": 20,
+            "puertoRico": 20
+          }
+        },
+        "comfortable": {
+          "title": "Comfortable",
+          "summaryDescription": "At this point I'm willing to take risks",
+          "dimensions": {
+            "bayArea": 70,
+            "hawaii": 70,
+            "LA": 40,
+            "palmSpringsJoshuaTree": 60,
+            "saltLakeCity": 70,
+            "newYorkCity": 50,
+            "miami": 50,
+            "santaFe": 70,
+            "tahoe": 60,
+            "arizona": 50,
+            "jacksonHole": 30,
+            "nashville": 80,
+            "charleston": 80,
+            "austin": 80,
+            "puertoRico": 80
+          }
+        },
+        "who-cares": {
+          "title": "Full speed",
+          "summaryDescription": "There's a pandemic?",
+          "dimensions": {
+            "bayArea": 100,
+            "hawaii": 100,
+            "LA": 100,
+            "palmSpringsJoshuaTree": 0,
+            "saltLakeCity": 0,
+            "newYorkCity": 100,
+            "miami": 100,
+            "santaFe": 0,
+            "tahoe": 0,
+            "arizona": 0,
+            "jacksonHole": 0,
+            "nashville": 100,
+            "charleston": 100,
+            "austin": 100,
+            "puertoRico": 100
+          }
+        }
+      }
+    }
+  ]
+}
