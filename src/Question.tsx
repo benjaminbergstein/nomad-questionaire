@@ -1,8 +1,8 @@
 import React from "react";
-import { Icon, VStack, Flex, Button, Text } from "@chakra-ui/react";
+import { Box, Icon, VStack, Flex, Button, Text } from "@chakra-ui/react";
 
 import OptionIcon from "./OptionIcon";
-const getSize = (n) => `${100 / n - 2}vw`;
+const getSize = (n: number) => `${100 / n - 2}vw`;
 
 import { QuestionType, AnswerType, OptionType } from "./types";
 
@@ -26,18 +26,18 @@ export default function Question({
             onClick={() => handleClick(key)}
             mb="4vw"
             colorScheme={answer?.answer === key ? "blue" : "gray"}
-            height={[getSize(2), getSize(4)]}
-            width={[getSize(2), getSize(4)]}
+            height={[getSize(2), getSize(2), getSize(4)]}
+            width={[getSize(2), getSize(2), getSize(4)]}
             variant="outline"
           >
             <VStack>
-              <Icon
-                width="30px"
-                height="30px"
-                as={() => (
-                  <OptionIcon questionSlug={question.slug} optionSlug={key} />
-                )}
-              />
+              <Box p={5} transform="scale(4, 4)">
+                <Icon
+                  as={() => (
+                    <OptionIcon questionSlug={question.slug} optionSlug={key} />
+                  )}
+                />
+              </Box>
               <Text
                 style={{ wordWrap: "break-word", whiteSpace: "break-spaces" }}
               >
