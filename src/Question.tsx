@@ -1,6 +1,7 @@
 import React from "react";
-import { Flex, Box, Button, VStack, Text } from "@chakra-ui/react";
+import { Icon, VStack, Flex, Button, Text } from "@chakra-ui/react";
 
+import OptionIcon from "./OptionIcon";
 const getSize = (n) => `${100 / n - 2}vw`;
 
 import { QuestionType, AnswerType, OptionType } from "./types";
@@ -29,11 +30,20 @@ export default function Question({
             width={[getSize(2), getSize(4)]}
             variant="outline"
           >
-            <Text
-              style={{ wordWrap: "break-word", whiteSpace: "break-spaces" }}
-            >
-              {val.title}
-            </Text>
+            <VStack>
+              <Icon
+                width="30px"
+                height="30px"
+                as={() => (
+                  <OptionIcon questionSlug={question.slug} optionSlug={key} />
+                )}
+              />
+              <Text
+                style={{ wordWrap: "break-word", whiteSpace: "break-spaces" }}
+              >
+                {val.title}
+              </Text>
+            </VStack>
           </Button>
         )
       )}
