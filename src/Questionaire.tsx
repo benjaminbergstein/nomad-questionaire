@@ -12,6 +12,7 @@ import { questions, dimensions } from "./lib/questions";
 import Question from "./Question";
 
 import { Selections, AnswerType } from "./types";
+import OptionIcon from "./OptionIcon";
 
 type CharacterStats = Record<string, number>;
 
@@ -68,14 +69,6 @@ export default function Questionaire({ questions, dimensions }) {
 
   return (
     <>
-      {questionNumber > 0 && (
-        <Button
-          leftIcon={<ChevronLeftIcon />}
-          onClick={() => setQuestionNumber((n) => n - 1)}
-        >
-          Previous
-        </Button>
-      )}
       {!isComplete && (
         <Question
           answer={selections[questions[questionNumber].slug]}
@@ -87,13 +80,16 @@ export default function Questionaire({ questions, dimensions }) {
         <Box>
           <Heading>You got "{dimensions[character].title}"!</Heading>
           {Object.values(selections).map(
-            ({ summaryTitle, answer, options }) => (
+            ({ slug, summaryTitle, answer, options }) => (
               <Box mb={2}>
                 <Box>
                   <Text fontWeight={700}>{summaryTitle}</Text>
                 </Box>
                 <Box>
-                  <Text>{options[answer].title}</Text>
+                  <Text>
+                    <OptionIcon questionSlug={slug} optionSlug={answer} />
+                    {options[answer].title}
+                  </Text>
                 </Box>
                 <Box>
                   <Text>{options[answer].summaryDescription}</Text>
@@ -104,6 +100,28 @@ export default function Questionaire({ questions, dimensions }) {
           )}
         </Box>
       )}
+      <Box height="100px" />
+      <Box
+        px={5}
+        display="flex"
+        position="fixed"
+        bottom="0px"
+        height="100px"
+        width="100vw"
+      >
+        {questionNumber > 0 && (
+          <Button
+            height="80px"
+            width="80px"
+            borderRadius="40px"
+            onClick={() => setQuestionNumber((n) => n - 1)}
+          >
+            <Box transform="scale(1.75)">
+              <ChevronLeftIcon />
+            </Box>
+          </Button>
+        )}
+      </Box>
     </>
   );
 }
