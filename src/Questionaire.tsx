@@ -17,7 +17,10 @@ type CharacterStats = Record<string, number>;
 
 const getDefaultDimensions = (dimensions) =>
   Object.keys(dimensions).reduce(
-    (acc: CharacterStats, dim: string): CharacterStats => ({ ...acc, dim: 0 }),
+    (acc: CharacterStats, dim: string): CharacterStats => ({
+      ...acc,
+      [dim]: 0,
+    }),
     {}
   ) as CharacterStats;
 
