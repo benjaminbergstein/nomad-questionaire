@@ -6,18 +6,28 @@ const getSize = (n: number, x: number = 1) => `${(100 / n - 4) * x}vw`;
 
 import { QuestionType, AnswerType, OptionType } from "./types";
 
+type NextQuestionFunction = (
+  question: QuestionType,
+  answer: string,
+  navigate: boolean
+) => void;
+
 export default function Question({
   question,
   answer,
   nextQuestion,
+  view = undefined,
 }: {
   question: QuestionType;
   answer: AnswerType;
-  nextQuestion: (question: QuestionType, answer: string) => void;
+  nextQuestion: NextQuestionFunction;
+  view?: string;
 }) {
+  const isSummary = view === "summary";
   const handleClick = (answer) => {
-    nextQuestion(question, answer);
+    nextQuestion(question, answer, !isSummary);
   };
+
   return (
     <>
       <Box p={2}>
@@ -25,38 +35,67 @@ export default function Question({
           {question.title}
         </Text>
       </Box>
-      <Flex justifyContent="space-between" flexWrap="wrap">
-        {Object.entries(question.options).map(
-          ([key, val]: [string, OptionType]) => (
-            <Button
-              onClick={() => handleClick(key)}
-              m="2vw"
-              colorScheme={answer?.answer === key ? "blue" : "gray"}
-              height={[getSize(1, 0.5), getSize(1, 0.5), getSize(4)]}
-              width={[getSize(1), getSize(1), getSize(4)]}
-              variant="outline"
-            >
-              <VStack>
-                <Box p={5} transform="scale(4, 4)">
-                  <Icon
-                    as={() => (
-                      <OptionIcon
-                        questionSlug={question.slug}
-                        optionSlug={key}
-                      />
-                    )}
-                  />
-                </Box>
-                <Text
-                  style={{ wordWrap: "break-word", whiteSpace: "break-spaces" }}
-                >
-                  {val.title}
-                </Text>
-              </VStack>
-            </Button>
-          )
-        )}
-      </Flex>
+      <Box width="100%" overflow={isSummary ? "auto" : "visible"}>
+        <Flex flexWrap={isSummary ? "nowrap" : "wrap"}>
+          {Object.entries(question.options).map(
+            ([key, val]: [string, OptionType]) => (
+              <Button
+                onClick={() => handleClick(key)}
+                m="2vw"
+                colorScheme={answer?.answer === key ? "blue" : "gray"}
+                height={
+                  isSummary
+                    ? "200px"
+                    : [getSize(1, 0.5), getSize(1, 0.5), getSize(4)]
+                }
+                minWidth={
+                  isSummary ? "200px" : [getSize(1), getSize(1), getSize(4)]
+                }
+                width={
+                  isSummary ? "200px" : [getSize(1), getSize(1), getSize(4)]
+                }
+                variant="outline"
+              >
+                <VStack width="40vw">
+                  <Box
+                    p={isSummary ? 3 : 5}
+                    transform={isSummary ? undefined : "scale(4, 4)"}
+                  >
+                    <Icon
+                      as={() => (
+                        <OptionIcon
+                          questionSlug={question.slug}
+                          optionSlug={key}
+                        />
+                      )}
+                    />
+                  </Box>
+                  <Text
+                    fontSize={isSummary ? "14px" : "xs"}
+                    style={{
+                      wordWrap: "break-word",
+                      whiteSpace: "break-spaces",
+                    }}
+                  >
+                    {val.title}
+                  </Text>
+                  <Text
+                    fontSize={isSummary ? "14px" : "xs"}
+                    color="gray.600"
+                    fontWeight={500}
+                    style={{
+                      wordWrap: "break-word",
+                      whiteSpace: "break-spaces",
+                    }}
+                  >
+                    {val.summaryDescription}
+                  </Text>
+                </VStack>
+              </Button>
+            )
+          )}
+        </Flex>
+      </Box>
     </>
   );
 }
