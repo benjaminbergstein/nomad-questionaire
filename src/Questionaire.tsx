@@ -84,6 +84,7 @@ export default function Questionaire({ questionaire }) {
             px={5}
             display="flex"
             position="fixed"
+            zIndex={10}
             bottom="0px"
             height="100px"
             width="100vw"
