@@ -32,7 +32,7 @@
         },
         "suv-or-truck": {
           "title": "SUV or Truck",
-          "summaryDescription": "More stuff, possible even good gas mileage.",
+          "summaryDescription": "More stuff, possibly even good gas mileage.",
           "dimensions": {
             "dirtbag": 25,
             "minimalist": 75,
@@ -64,9 +64,9 @@
           "title": "Bicycle",
           "summaryDescription": "You'll strap as much as you can to two wheels and pedal your way to freedom.",
           "dimensions": {
-            "dirtbag": 100,
-            "minimalist": 75,
-            "bougie": -75,
+            "dirtbag": 175,
+            "minimalist": 100,
+            "bougie": -200,
             "vacationer": 50
           }
         },
@@ -143,7 +143,7 @@
           "dimensions": {
             "dirtbag": -200,
             "minimalist": -100,
-            "bougie": 200,
+            "bougie": 250,
             "vacationer": 100
           }
         }
@@ -161,7 +161,7 @@
             "dirtbag": 150,
             "minimalist": 125,
             "bougie": 75,
-            "vacationer": 100
+            "vacationer": 200
           }
         },
         "desert": {
@@ -169,9 +169,9 @@
           "summaryDescription": "Cacti and palm trees please, and hopefully a pool and fire pit.",
           "dimensions": {
             "dirtbag": 75,
-            "minimalist": 200,
-            "bougie": -100,
-            "vacationer": 100
+            "minimalist": 300,
+            "bougie": -150,
+            "vacationer": 200
           }
         },
         "mountains": {
@@ -180,18 +180,18 @@
           "dimensions": {
             "dirtbag": 125,
             "minimalist": 100,
-            "bougie": 0,
-            "vacationer": 75
+            "bougie": 50,
+            "vacationer": 150
           }
         },
         "city": {
           "title": "City",
           "summaryDescription": "Stay out late, live next to a 3rd wave coffee shop",
           "dimensions": {
-            "dirtbag": -25,
-            "minimalist": 75,
-            "bougie": 200,
-            "vacationer": 100
+            "dirtbag": -150,
+            "minimalist": -25,
+            "bougie": 250,
+            "vacationer": 150
           }
         }
       }
@@ -235,10 +235,10 @@
           "title": "Indefinitely",
           "summaryDescription": "",
           "dimensions": {
-            "dirtbag": 200,
-            "minimalist": 100,
-            "bougie": 0,
-            "vacationer": -100
+            "dirtbag": 250,
+            "minimalist": 150,
+            "bougie": 50,
+            "vacationer": -250
           }
         }
       }
