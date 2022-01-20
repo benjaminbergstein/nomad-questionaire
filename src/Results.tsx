@@ -5,6 +5,7 @@ import Questionaires from "./lib/questions";
 import { Selections, AnswerType } from "./types";
 import { useLocalStorageItem } from "./storage";
 import QuizDivider from "./QuizDivider";
+import { BiWindowOpen } from "react-icons/bi";
 
 type CharacterStats = Record<string, number>;
 
@@ -59,19 +60,6 @@ export default function Results({ nextQuestion, questionaire, dimensions }) {
     if (!isCurrentQuestionaire) return;
     window.history.pushState({}, "yes", `/${questionaire}/${character}`);
   }, [isCurrentQuestionaire]);
-
-  useEffect(() => {
-    const listener = () => {
-      if (!headingRef.current) return;
-      console.log(headingRef.current);
-    };
-
-    window.addEventListener("scroll", listener);
-
-    return () => {
-      window.removeEventListener("scroll", listener);
-    };
-  });
 
   return (
     <Box>
