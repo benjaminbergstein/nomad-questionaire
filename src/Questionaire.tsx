@@ -8,6 +8,7 @@ import { Selections } from "./types";
 import { useLocalStorageItem } from "./storage";
 import Results from "./Results";
 import { BiReset } from "react-icons/bi";
+import QuizDivider from "./QuizDivider";
 
 export default function Questionaire({ questionaire }) {
   const [currentQuestionaire, setQuestionaire] = useLocalStorageItem(
@@ -52,33 +53,29 @@ export default function Questionaire({ questionaire }) {
 
   return (
     <>
-      <Flex alignItems="center" my={4} maxWidth="700px" mx="auto">
-        <Box flex={1} px={3}>
-          <Divider borderColor="gray.400" />
-        </Box>
-        <Box>
-          <Text
-            color="gray.400"
-            fontSize="xs"
-            fontWeight={700}
-            style={{ textTransform: "uppercase", letterSpacing: "1px" }}
-          >
-            Quiz
-          </Text>
-        </Box>
-        <Box px={3} flex={1}>
-          <Divider borderColor="gray.400" />
-        </Box>
-      </Flex>
-      <Heading size="md" textAlign="center">
-        {title}
-      </Heading>
       {!isComplete && (
-        <Question
-          answer={selections[questions[questionNumber].slug]}
-          nextQuestion={nextQuestion}
-          question={questions[questionNumber]}
-        />
+        <>
+          <QuizDivider />
+          <Box
+            zIndex={1}
+            position="sticky"
+            top="0px"
+            bg="white"
+            pt={3}
+            pb={3}
+            boxShadow="lg"
+            mb={3}
+          >
+            <Heading size="xs" textAlign="center">
+              {Questionaires[questionaire].title}
+            </Heading>
+          </Box>
+          <Question
+            answer={selections[questions[questionNumber].slug]}
+            nextQuestion={nextQuestion}
+            question={questions[questionNumber]}
+          />
+        </>
       )}
       {isComplete && (
         <>

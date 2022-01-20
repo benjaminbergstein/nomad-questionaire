@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Heading, Box } from "@chakra-ui/react";
 import Question from "./Question";
-
+import Questionaires from "./lib/questions";
 import { Selections, AnswerType } from "./types";
 import { useLocalStorageItem } from "./storage";
+import QuizDivider from "./QuizDivider";
 
 type CharacterStats = Record<string, number>;
 
@@ -37,6 +38,7 @@ const calculate = (dimensions, selections: Selections): CharacterStats => {
 };
 
 export default function Results({ nextQuestion, questionaire, dimensions }) {
+  const headingRef = useRef<HTMLDivElement>(null);
   const [currentQuestionaire] = useLocalStorageItem("questionaire", "who");
   const isCurrentQuestionaire = currentQuestionaire === questionaire;
   const [selections] = useLocalStorageItem(
@@ -58,11 +60,41 @@ export default function Results({ nextQuestion, questionaire, dimensions }) {
     window.history.pushState({}, "yes", `/${questionaire}/${character}`);
   }, [isCurrentQuestionaire]);
 
+  useEffect(() => {
+    const listener = () => {
+      if (!headingRef.current) return;
+      console.log(headingRef.current);
+    };
+
+    window.addEventListener("scroll", listener);
+
+    return () => {
+      window.removeEventListener("scroll", listener);
+    };
+  });
+
   return (
-    <Box pt={3}>
-      <Heading textAlign="center" size="sm">
-        You got "{dimensions[character].title}"!
-      </Heading>
+    <Box>
+      <QuizDivider />
+      <Box
+        zIndex={1}
+        position="sticky"
+        top="0px"
+        bg="white"
+        pt={3}
+        pb={3}
+        boxShadow="lg"
+        mb={3}
+      >
+        <Heading size="xs" textAlign="center">
+          {Questionaires[questionaire].title}
+        </Heading>
+
+        <Heading pt={3} textAlign="center" size="sm">
+          You got "{dimensions[character].title}"!
+        </Heading>
+      </Box>
+
       {Object.values(selections).map(({ answer, ...question }, idx) => (
         <Question
           view="summary"
