@@ -59,7 +59,11 @@ export default function Question({
                   height={
                     isSummary
                       ? "200px"
-                      : [getSize(1, 0.5), getSize(1, 0.5), getSize(4)]
+                      : [
+                          getSize(1, isSummary ? 0.5 : 1),
+                          getSize(1, isSummary ? 0.5 : 1),
+                          getSize(4),
+                        ]
                   }
                   minWidth={
                     isSummary ? "200px" : [getSize(1), getSize(1), getSize(4)]
