@@ -43,7 +43,7 @@ export default function Question({
             right="0px"
             top="0px"
             height="200px"
-            background="linear-gradient(to right, transparent, white);"
+            background="linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)"
             pointerEvents="none"
             width="25vw"
           />
