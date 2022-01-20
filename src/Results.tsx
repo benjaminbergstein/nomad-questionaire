@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Heading, Box } from "@chakra-ui/react";
 import Question from "./Question";
 
@@ -37,12 +37,13 @@ const calculate = (dimensions, selections: Selections): CharacterStats => {
 };
 
 export default function Results({ nextQuestion, questionaire, dimensions }) {
+  const [currentQuestionaire] = useLocalStorageItem("questionaire", "who");
+  const isCurrentQuestionaire = currentQuestionaire === questionaire;
   const [selections] = useLocalStorageItem(
     `${questionaire}:selections`,
     {}
   ) as [Selections, React.Dispatch<React.SetStateAction<Selections>>, any];
 
-  console.log(calculate(dimensions, selections));
   const [character] = Object.entries(calculate(dimensions, selections)).reduce(
     (acc: [string, number] | undefined, [key, stat]: [string, number]) => {
       if (!acc) return [key, stat];
@@ -51,6 +52,11 @@ export default function Results({ nextQuestion, questionaire, dimensions }) {
     },
     undefined
   );
+
+  useEffect(() => {
+    if (!isCurrentQuestionaire) return;
+    window.history.pushState({}, "yes", `/${questionaire}/${character}`);
+  }, [isCurrentQuestionaire]);
 
   return (
     <Box pt={3}>

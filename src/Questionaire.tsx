@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Flex, Heading, Divider, Text, Box, Button } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import Question from "./Question";
 import Questionaires from "./lib/questions";
 
-import { Selections, AnswerType } from "./types";
+import { Selections } from "./types";
 import { useLocalStorageItem } from "./storage";
 import Results from "./Results";
+import { BiReset } from "react-icons/bi";
 
 export default function Questionaire({ questionaire }) {
   const [currentQuestionaire, setQuestionaire] = useLocalStorageItem(
@@ -22,7 +23,16 @@ export default function Questionaire({ questionaire }) {
   const [selections, setSelections] = useLocalStorageItem(
     `${questionaire}:selections`,
     {}
-  ) as [Selections, React.Dispatch<React.SetStateAction<Selections>>, any];
+  ) as [
+    Selections,
+    React.Dispatch<React.SetStateAction<Selections>>,
+    () => void
+  ];
+  const reset = () => {
+    setQuestionaire("who");
+    setQuestionNumber(0);
+    setSelections({});
+  };
   const isComplete = questions[questionNumber] === undefined;
 
   const nextQuestion = (question, answer, navigate = true) => {
@@ -31,7 +41,11 @@ export default function Questionaire({ questionaire }) {
       [question.slug]: { ...question, answer },
     }));
     if (navigate) {
-      window.history.pushState({}, "yes", `/where/${question.slug}`);
+      window.history.pushState(
+        {},
+        "yes",
+        `/${questionaire}/${questions[questionNumber + 1]?.slug}`
+      );
       setQuestionNumber((n) => n + 1);
     }
   };
@@ -88,7 +102,7 @@ export default function Questionaire({ questionaire }) {
             width="100vw"
             justifyContent="space-between"
           >
-            {questionNumber > 0 && (
+            {!isComplete && questionNumber > 0 && (
               <Button
                 height="80px"
                 width="80px"
@@ -97,6 +111,13 @@ export default function Questionaire({ questionaire }) {
               >
                 <Box transform="scale(1.75)">
                   <ChevronLeftIcon />
+                </Box>
+              </Button>
+            )}
+            {isComplete && (
+              <Button height="80px" borderRadius="40px" onClick={reset}>
+                <Box transform="scale(1.75)">
+                  <BiReset />
                 </Box>
               </Button>
             )}
