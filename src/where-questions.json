@@ -1,5 +1,6 @@
 {
-  "cities": {
+  "title": "Where are you headed?",
+  "dimensions": {
     "bayArea": {
       "title": "Bay Area"
     },
@@ -185,6 +186,27 @@
       "title": "Budget",
       "summaryTitle": "How much are you willing to spend on living expenses?",
       "options": {
+        "dirtbag": {
+          "title": "$0 / night",
+          "summaryDescription": "My wallet doesn't need to know I'm traveling.",
+          "dimensions": {
+            "bayArea": 0,
+            "hawaii": 0,
+            "LA": 0,
+            "palmSpringsJoshuaTree": 100,
+            "saltLakeCity": 0,
+            "newYorkCity": 0,
+            "miami": 0,
+            "santaFe": 10,
+            "tahoe": 0,
+            "arizona": 0,
+            "jacksonHole": 100,
+            "nashville": 0,
+            "charleston": 0,
+            "austin": 0,
+            "puertoRico": 100
+          }
+        },
         "thrifty": {
           "title": "< $50 / night",
           "summaryDescription": "You just want a roof over your head.",
@@ -247,27 +269,6 @@
             "austin": 0,
             "puertoRico": 60
           }
-        },
-        "dirtbag": {
-          "title": "$0 / night",
-          "summaryDescription": "My wallet doesn't need to know I'm traveling.",
-          "dimensions": {
-            "bayArea": 0,
-            "hawaii": 0,
-            "LA": 0,
-            "palmSpringsJoshuaTree": 100,
-            "saltLakeCity": 0,
-            "newYorkCity": 0,
-            "miami": 0,
-            "santaFe": 10,
-            "tahoe": 0,
-            "arizona": 0,
-            "jacksonHole": 100,
-            "nashville": 0,
-            "charleston": 0,
-            "austin": 0,
-            "puertoRico": 100
-          }
         }
       }
     },
@@ -284,16 +285,16 @@
             "hawaii": 100,
             "LA": 100,
             "palmSpringsJoshuaTree": 0,
-            "saltLakeCity": 0,
+            "saltLakeCity": -100,
             "newYorkCity": 0,
             "miami": 100,
-            "santaFe": 0,
+            "santaFe": -50,
             "tahoe": 30,
-            "arizona": 0,
-            "jacksonHole": 0,
-            "nashville": 0,
-            "charleston": 0,
-            "austin": 0,
+            "arizona": -50,
+            "jacksonHole": -50,
+            "nashville": -25,
+            "charleston": 25,
+            "austin": -25,
             "puertoRico": 100
           }
         },
@@ -396,16 +397,16 @@
             "hawaii": 100,
             "LA": 70,
             "palmSpringsJoshuaTree": 0,
-            "saltLakeCity": 0,
+            "saltLakeCity": -50,
             "newYorkCity": 0,
             "miami": 100,
-            "santaFe": 0,
+            "santaFe": -50,
             "tahoe": 0,
-            "arizona": 0,
+            "arizona": -50,
             "jacksonHole": 0,
-            "nashville": 0,
-            "charleston": 0,
-            "austin": 0,
+            "nashville": -25,
+            "charleston": 25,
+            "austin": -25,
             "puertoRico": 100
           }
         },
