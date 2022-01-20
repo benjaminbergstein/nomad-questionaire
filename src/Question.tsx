@@ -35,66 +35,85 @@ export default function Question({
           {question.title}
         </Text>
       </Box>
-      <Box width="100%" overflow={isSummary ? "auto" : "visible"}>
-        <Flex flexWrap={isSummary ? "nowrap" : "wrap"}>
-          {Object.entries(question.options).map(
-            ([key, val]: [string, OptionType]) => (
-              <Button
-                onClick={() => handleClick(key)}
-                m="2vw"
-                colorScheme={answer?.answer === key ? "blue" : "gray"}
-                height={
-                  isSummary
-                    ? "200px"
-                    : [getSize(1, 0.5), getSize(1, 0.5), getSize(4)]
-                }
-                minWidth={
-                  isSummary ? "200px" : [getSize(1), getSize(1), getSize(4)]
-                }
-                width={
-                  isSummary ? "200px" : [getSize(1), getSize(1), getSize(4)]
-                }
-                variant="outline"
-              >
-                <VStack width="40vw">
-                  <Box
-                    p={isSummary ? 3 : 5}
-                    transform={isSummary ? undefined : "scale(4, 4)"}
-                  >
-                    <Icon
-                      as={() => (
-                        <OptionIcon
-                          questionSlug={question.slug}
-                          optionSlug={key}
-                        />
-                      )}
-                    />
-                  </Box>
-                  <Text
-                    fontSize={isSummary ? "14px" : "xs"}
-                    style={{
-                      wordWrap: "break-word",
-                      whiteSpace: "break-spaces",
-                    }}
-                  >
-                    {val.title}
-                  </Text>
-                  <Text
-                    fontSize={isSummary ? "14px" : "xs"}
-                    color="gray.600"
-                    fontWeight={500}
-                    style={{
-                      wordWrap: "break-word",
-                      whiteSpace: "break-spaces",
-                    }}
-                  >
-                    {val.summaryDescription}
-                  </Text>
-                </VStack>
-              </Button>
-            )
-          )}
-        </Flex>
+      <Box position="relative">
+        {isSummary && (
+          <Box
+            zIndex={5}
+            position="absolute"
+            right="0px"
+            top="0px"
+            height="200px"
+            background="linear-gradient(to right, transparent, white);"
+            pointerEvents="none"
+            width="25vw"
+          />
+        )}
+        <Box width="100%" overflow={isSummary ? "auto" : "visible"}>
+          <Flex flexWrap={isSummary ? "nowrap" : "wrap"}>
+            {Object.entries(question.options).map(
+              ([key, val]: [string, OptionType]) => (
+                <Button
+                  onClick={() => handleClick(key)}
+                  m="2vw"
+                  colorScheme={answer?.answer === key ? "blue" : "gray"}
+                  height={
+                    isSummary
+                      ? "200px"
+                      : [
+                          getSize(1, isSummary ? 0.5 : 1),
+                          getSize(1, isSummary ? 0.5 : 1),
+                          getSize(4),
+                        ]
+                  }
+                  minWidth={
+                    isSummary ? "200px" : [getSize(1), getSize(1), getSize(4)]
+                  }
+                  width={
+                    isSummary ? "200px" : [getSize(1), getSize(1), getSize(4)]
+                  }
+                  variant="outline"
+                >
+                  <VStack width="40vw">
+                    <Box
+                      p={isSummary ? 3 : 5}
+                      transform={isSummary ? undefined : "scale(4, 4)"}
+                    >
+                      <Icon
+                        as={() => (
+                          <OptionIcon
+                            questionSlug={question.slug}
+                            optionSlug={key}
+                          />
+                        )}
+                      />
+                    </Box>
+                    <Text
+                      fontSize={isSummary ? "14px" : "xs"}
+                      style={{
+                        wordWrap: "break-word",
+                        whiteSpace: "break-spaces",
+                      }}
+                    >
+                      {val.title}
+                    </Text>
+                    <Text
+                      fontSize={isSummary ? "14px" : "xs"}
+                      color="gray.600"
+                      fontWeight={500}
+                      style={{
+                        wordWrap: "break-word",
+                        whiteSpace: "break-spaces",
+                      }}
+                    >
+                      {val.summaryDescription}
+                    </Text>
+                  </VStack>
+                </Button>
+              )
+            )}
+            <Box flexShrink={0} width="25vw" />
+          </Flex>
+        </Box>
       </Box>
     </>
   );
