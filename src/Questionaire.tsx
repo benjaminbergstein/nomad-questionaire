@@ -103,7 +103,12 @@ export default function Questionaire({ questionaire }) {
               </Button>
             )}
             {isComplete && (
-              <Button height="80px" borderRadius="40px" onClick={reset}>
+              <Button
+                width="80px"
+                height="80px"
+                borderRadius="40px"
+                onClick={reset}
+              >
                 <Box transform="scale(1.75)">
                   <BiReset />
                 </Box>
