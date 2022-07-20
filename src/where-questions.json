@@ -65,7 +65,7 @@
             "newYorkCity": 0,
             "miami": 0,
             "santaFe": 0,
-            "tahoe": 0,
+            "tahoe": 100,
             "arizona": 0,
             "jacksonHole": 0,
             "nashville": 0,
@@ -79,7 +79,7 @@
           "summaryDescription": "9am-5pm",
           "dimensions": {
             "bayArea": 100,
-            "hawaii": 0,
+            "hawaii": 75,
             "LA": 100,
             "palmSpringsJoshuaTree": 100,
             "saltLakeCity": 0,
@@ -162,21 +162,21 @@
           "title": "Night shift",
           "summaryDescription": "1pm-9pm",
           "dimensions": {
-            "bayArea": 0,
-            "hawaii": 0,
-            "LA": 0,
-            "palmSpringsJoshuaTree": 0,
-            "saltLakeCity": 0,
-            "newYorkCity": 0,
-            "miami": 0,
-            "santaFe": 0,
-            "tahoe": 0,
-            "arizona": 0,
+            "bayArea": -150,
+            "hawaii": -250,
+            "LA": -150,
+            "palmSpringsJoshuaTree": -100,
+            "saltLakeCity": -75,
+            "newYorkCity": 50,
+            "miami": 50,
+            "santaFe": -75,
+            "tahoe": -150,
+            "arizona": -75,
             "jacksonHole": 0,
-            "nashville": 0,
-            "charleston": 0,
-            "austin": 0,
-            "puertoRico": 100
+            "nashville": 50,
+            "charleston": 50,
+            "austin": -50,
+            "puertoRico": 150
           }
         }
       }
@@ -200,7 +200,7 @@
             "santaFe": 10,
             "tahoe": 0,
             "arizona": 0,
-            "jacksonHole": 100,
+            "jacksonHole": -100,
             "nashville": 0,
             "charleston": 0,
             "austin": 0,
@@ -221,7 +221,7 @@
             "santaFe": 50,
             "tahoe": 0,
             "arizona": 50,
-            "jacksonHole": 100,
+            "jacksonHole": -100,
             "nashville": 20,
             "charleston": 50,
             "austin": 30,
@@ -242,7 +242,7 @@
             "santaFe": 100,
             "tahoe": 100,
             "arizona": 100,
-            "jacksonHole": 50,
+            "jacksonHole": -50,
             "nashville": 100,
             "charleston": 100,
             "austin": 100,
@@ -263,7 +263,7 @@
             "santaFe": 0,
             "tahoe": 100,
             "arizona": 0,
-            "jacksonHole": 0,
+            "jacksonHole": 150,
             "nashville": 0,
             "charleston": 0,
             "austin": 0,
@@ -302,21 +302,21 @@
           "title": "Desert",
           "summaryDescription": "Sun, sand and sprawling land",
           "dimensions": {
-            "bayArea": 0,
-            "hawaii": 0,
+            "bayArea": 25,
+            "hawaii": -25,
             "LA": 80,
             "palmSpringsJoshuaTree": 100,
             "saltLakeCity": 0,
             "newYorkCity": 0,
-            "miami": 0,
+            "miami": -50,
             "santaFe": 100,
             "tahoe": 0,
             "arizona": 100,
             "jacksonHole": 20,
-            "nashville": 0,
-            "charleston": 0,
-            "austin": 30,
-            "puertoRico": 0
+            "nashville": -50,
+            "charleston": -50,
+            "austin": 50,
+            "puertoRico": -100
           }
         },
         "mountains": {
@@ -460,7 +460,7 @@
             "hawaii": 20,
             "LA": 50,
             "palmSpringsJoshuaTree": 80,
-            "saltLakeCity": 60,
+            "saltLakeCity": 100,
             "newYorkCity": 0,
             "miami": 0,
             "santaFe": 50,
@@ -470,7 +470,7 @@
             "nashville": 0,
             "charleston": 0,
             "austin": 0,
-            "puertoRico": 0
+            "puertoRico": -50
           }
         }
       }
@@ -551,7 +551,7 @@
             "hawaii": 0,
             "LA": 0,
             "palmSpringsJoshuaTree": 0,
-            "saltLakeCity": 50,
+            "saltLakeCity": 100,
             "newYorkCity": 30,
             "miami": 0,
             "santaFe": 30,
@@ -560,8 +560,8 @@
             "jacksonHole": 100,
             "nashville": 0,
             "charleston": 0,
-            "austin": 0,
-            "puertoRico": 0
+            "austin": -50,
+            "puertoRico": -100
           }
         }
       }
